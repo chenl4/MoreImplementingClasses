@@ -274,14 +274,20 @@ class CapitalT(object):
           :rtype: CapitalT
         """
         # --------------------------------------------------------------
-        # TODO: 7.
+        # DONE: 7.
         #   READ the above specification, including the Example.
         #   Implement and test this method by uncommenting the appropriate
         #     run_test method in main. Compare the graphics window to
         #     clone.pdf.
         # --------------------------------------------------------------
 
-        return self.v_rect.clone() and self.h_rect.clone()
+        t = CapitalT(rg.Point((self.h_rect.corner_2.x + self.h_rect.corner_1.x) / 2,
+                                 (self.h_rect.corner_2.y + self.h_rect.corner_1.y) / 2),
+                        self.h_rect.corner_2.x - self.h_rect.corner_1.x,
+                        self.v_rect.corner_2.y - self.v_rect.corner_1.y,
+                        self.h_rect.corner_2.y - self.h_rect.corner_1.y)
+        t.set_colors(self.v_rect.fill_color, self.v_rect.outline_color)
+        return t
 
 
 # ----------------------------------------------------------------------
