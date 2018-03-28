@@ -143,11 +143,6 @@ class CapitalT(object):
         #   Note: you will need to also implement attach_to before testing
         # --------------------------------------------------------------
 
-        self.intersection_center = intersection_center
-        self.width = width
-        self.height = height
-        self.letter_thickness = letter_thickness
-
         self.h_rect = rg.Rectangle(rg.Point(intersection_center.x - (1 / 2) * width,
                                             intersection_center.y - (1 / 2) * letter_thickness),
                                    rg.Point(intersection_center.x + (1 / 2) * width,
@@ -286,7 +281,7 @@ class CapitalT(object):
         #     clone.pdf.
         # --------------------------------------------------------------
 
-        return CapitalT(self.intersection_center, self.width, self.height, self.letter_thickness)
+        return self.v_rect.clone() and self.h_rect.clone()
 
 
 # ----------------------------------------------------------------------
