@@ -283,9 +283,9 @@ class CapitalT(object):
 
         t = CapitalT(rg.Point((self.h_rect.corner_2.x + self.h_rect.corner_1.x) / 2,
                                  (self.h_rect.corner_2.y + self.h_rect.corner_1.y) / 2),
-                        self.h_rect.corner_2.x - self.h_rect.corner_1.x,
-                        self.v_rect.corner_2.y - self.v_rect.corner_1.y,
-                        self.h_rect.corner_2.y - self.h_rect.corner_1.y)
+                     self.h_rect.corner_2.x - self.h_rect.corner_1.x,
+                     self.v_rect.corner_2.y - self.v_rect.corner_1.y,
+                     self.h_rect.corner_2.y - self.h_rect.corner_1.y)
         t.set_colors(self.v_rect.fill_color, self.v_rect.outline_color)
         return t
 
